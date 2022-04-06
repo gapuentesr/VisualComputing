@@ -9,5 +9,12 @@ type: docs
 
 ## Integrantes
 
- - Gustavo Alberto Puentes Romero
- - David Sneider Ovalle Pineda
+ {{< columns >}}
+
+- Gustavo Alberto Puentes Romero
+  gapuentesr@unal.edu.co
+<--->
+
+- David Sneider Ovalle Pineda
+  dsovallep@unal.edu.co
+{{< /columns >}}

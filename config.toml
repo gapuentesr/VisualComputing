@@ -1,6 +1,6 @@
 baseURL = "https://gapuentesr.github.io/VisualComputing/"
 languageCode = "en-us"
-title = "Showcase Template"
+title = "Computación visual"
 theme = 'book'
 
 # Book configuration

@@ -2,6 +2,7 @@
 bookCollapseSection: true
 ---
 
+{{< hint warning >}} 
 # Planteamiento del problema e introducción
 ## Ilusiones ópticas: 
 
@@ -13,8 +14,9 @@ Una ilusión óptica es una imagen que engaña el sistema visual, desde el ojo a
 ## ¿Por qué se producen las ilusiones ópticas?
 Se producen cuando se presentan varias formas en una imagen única y nuestro cerebro entra en conflicto.
 Los sentidos filtran la información del exterior para que luego esta sea procesada y modificada en el cerebro.
+{{< /hint >}} 
 
-
+{{< hint info >}} 
 # Antecedentes
 
 ## Ilusiones ópticas cognitivas
@@ -41,8 +43,9 @@ En los siguiente anexos mostraremos algunos ejemplos de ilusiones de:
 - Moiré Patterns
 
 - Poggendorff
+{{< /hint >}} 
 
-
+{{< hint warning >}} 
 # Conclusiones y trabajo futuro
 
 Muchas veces nuestros ojos nos dan la información correcta y es el cerebro el que no realiza una correcta interpretación. También es posible que se interpreten bien los datos, pero la imagen nos resulta “imposible”, y no es posible realizar una representación mental de la misma.
@@ -54,9 +57,13 @@ el cerebro no cuenta con la suficiente capacidad como para manejar toda la infor
 
 ## Trabajo futuro
  
+- Incluir interactividad en algunas ilusiones estaticas
+
 - Ilusion de Tusi Motion
 
+{{< /hint >}}
 
+{{< hint danger >}}
 # Referencias
 
 - https://www.kadenze.com/courses/introduction-to-programming-for-the-visual-arts-with-p5-js-vi/info?signedin=true
@@ -66,4 +73,4 @@ el cerebro no cuenta con la suficiente capacidad como para manejar toda la infor
 - https://www.oftalvist.es/blog/ilusiones-opticas/
 
 
-
+{{< /hint >}}

@@ -32,7 +32,8 @@ function draw() {
       let x = pose.keypoints[i].position.x  - 320;
       let y = pose.keypoints[i].position.y - 270;
       fill(0, 255, 0);
-      ellipse(x, y, 10, 10);
+      sphere(5);
+      translate(x, y);
     }
 
     for (let i = 0; i < skeleton.length; i++){

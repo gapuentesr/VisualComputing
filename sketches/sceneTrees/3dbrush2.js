@@ -11,6 +11,11 @@
 // speed, etc.
 
 // Brush controls
+let video;
+let poseNet;
+let pose;
+let skeleton;
+
 let color;
 let depth;
 let brush;
@@ -36,6 +41,12 @@ function setup() {
   escorzo = true;
   perspective();
 
+  video = createCapture(VIDEO);
+  video.hide();
+
+  poseNet = ml5.poseNet(video, modelLoaded);
+  poseNet.on('pose', gotPoses);
+
   // brush stuff
   points = [];
   depth = createSlider(0, 1, 0.05, 0.05);
@@ -46,6 +57,18 @@ function setup() {
   // select initial brush
   brush = sphereBrush;
 }
+
+function modelLoaded(){
+  console.log('poseNet está listo')
+}
+
+function gotPoses(poses){
+  if (poses.length > 0){
+    pose = poses[0].pose;
+    skeleton = poses[0].skeleton;
+  }
+}
+
 
 function draw() {
   update();
@@ -61,6 +84,26 @@ function draw() {
     translate(point.worldPosition);
     brush(point);
     pop();
+  }
+
+  image(video, -300, -300);
+
+  if (pose){
+    for (let i = 0; i < pose.keypoints.length; i++){
+      let x = pose.keypoints[i].position.x;
+      let y = pose.keypoints[i].position.y;
+      fill(0, 255, 0);
+      ellipse(x, y, 10, 10);
+    }
+
+    for (let i = 0; i < skeleton.length; i++){
+      let a = skeleton[i][0];
+      let b = skeleton[i][1];
+      strokeWeight(2);
+      stroke(255);
+      line(a.position.x, a.position.y, b.position.x, b.position.y);
+    }
+    
   }
 }
 

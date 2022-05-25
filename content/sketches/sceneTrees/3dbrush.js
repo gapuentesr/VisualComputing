@@ -4,7 +4,7 @@ let pose;
 let skeleton;
 
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(640, 480, WEBGL);
   video = createCapture(VIDEO);
   video.hide();
 
@@ -25,19 +25,19 @@ function modelLoaded(){
 }
 
 function draw() {
-  image(video, 0, 0);
+  image(video, -320, -270);
 
   if (pose){
     for (let i = 0; i < pose.keypoints.length; i++){
-      let x = pose.keypoints[i].position.x;
-      let y = pose.keypoints[i].position.y;
+      let x = pose.keypoints[i].position.x  - 320;
+      let y = pose.keypoints[i].position.y - 270;
       fill(0, 255, 0);
       ellipse(x, y, 10, 10);
     }
 
     for (let i = 0; i < skeleton.length; i++){
-      let a = skeleton[i][0];
-      let b = skeleton[i][1];
+      let a = skeleton[i][0] -320;
+      let b = skeleton[i][1] -270;
       strokeWeight(2);
       stroke(255);
       line(a.position.x, a.position.y, b.position.x, b.position.y);

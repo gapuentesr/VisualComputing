@@ -2,8 +2,8 @@
 
 {{< hint warning >}}
 
-## 1). Rasterización
-
+## 1). Renderizado
+La renderización es el proceso de generar una imagen a partir de un modelo 2D o 3D por medio de un software de computador. En la mayoría de los casos, se consigue un efecto óptico que permite una visión realista, con profundidad y textura.
 
 ## 2). Tecnicas de interacción 3D
 

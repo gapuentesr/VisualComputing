@@ -3,7 +3,7 @@ colorFG = '#111111',
 colorBG = '#f1f1f1';
 
 function preload(){
-	img = loadImage('/VisualComputing/sketches/rendering/images/star.png');
+	img = loadImage('/VisualComputing/sketches/shaders/images/lion.jpg');
 }
 
 function setup() {

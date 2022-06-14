@@ -5,9 +5,9 @@ type: docs
 
 # Computación visual
 
-2022 - I
+[ 2022 - I ]
 
-## Integrantes
+## Integrante
 
  {{< columns >}}
 
@@ -15,6 +15,5 @@ type: docs
   gapuentesr@unal.edu.co
 <--->
 
-- David Sneider Ovalle Pineda
-  dsovallep@unal.edu.co
+
 {{< /columns >}}

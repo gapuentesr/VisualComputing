@@ -27,7 +27,7 @@ function draw() {
   // world-space quad (i.e., p5 world space definition: https://shorturl.at/dhCK2)
   //quad(-width / 2, -height / 2, width / 2, -height / 2, width / 2, height / 2, -width / 2, height / 2);
   circle(0, 0, 300);
-  triangle(-100, 100, 100, 100, 0, -100);
+  //triangle(-100, 100, 100, 100, 0, -100);
   pop();
 }
 

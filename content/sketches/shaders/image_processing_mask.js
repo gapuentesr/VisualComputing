@@ -7,8 +7,8 @@ let mask;
 function preload() {
   video_src = createVideo(['/VisualComputing/sketches/shaders/images/mandrill.webm']);
   video_src.hide(); // by default video shows up in separate dom
-  maskShader = readShader('/VisualComputing/sketches/shaders/mask2.frag', { varyings: Tree.texcoords2 });
-  img = loadImage('/VisualComputing/sketches/shaders/images/lion.jpg');
+  maskShader = readShader('/VisualComputing/sketches/shaders/image_processing_mask.frag', { varyings: Tree.texcoords2 });
+  img = loadImage('/VisualComputing/sketches/shaders/images/leaves.jpg');
  
 }
 

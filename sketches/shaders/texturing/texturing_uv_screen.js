@@ -9,7 +9,7 @@ function preload() {
   // leads to the same gl_Position result.
   // Interpolate only texture coordinates (i.e., varyings: Tree.texcoords2).
   // see: https://github.com/VisualComputing/p5.treegl#handling
-  uvShader = readShader('/VisualComputing/sketches/shaders/uv_alpha.frag', { matrices: Tree.pmvMatrix, varyings: Tree.texcoords2 });
+  uvShader = readShader('/VisualComputing/sketches/shaders/texturing/texturing_uv_alpha.frag', { matrices: Tree.pmvMatrix, varyings: Tree.texcoords2 });
 }
 
 function setup() {
@@ -25,7 +25,7 @@ function setup() {
   easycam.setState(state, 2000); // now animate to that state
   textureMode(NORMAL);
   opacity = createSlider(0, 1, 0.5, 0.01);
-  opacity.position(10, 25);
+  opacity.position(10, 10);
   opacity.style('width', '280px');
 }
 
@@ -36,12 +36,12 @@ function draw() {
   // world space scene
   axes();
   grid();
-  translate(0, -70);
+  translate(50, -50, -40);
   rotateY(0.5);
-  fill(color(255, 0, 255, 125));
-  box(30, 50);
-  translate(70, 70);
-  fill(color(0, 255, 255, 125));
+  fill(color(255, 0, 255, 255));
+  box(40, 60);
+  translate(-120, 90, 30);
+  fill(color(0, 255, 255, 245));
   sphere(30, 50);
   // use custom shader
   shader(uvShader);
@@ -51,7 +51,10 @@ function draw() {
   // see: https://github.com/VisualComputing/p5.treegl#heads-up-display
   beginHUD();
   noStroke();
-  quad(0, 0, width, 0, width, height, 0, height);
+
+  triangle(0, 5, 295, 300, 0, 300);
+
+  triangle(5, 0, 300, 0, 300, 295);
   endHUD();
 }
 

@@ -17,7 +17,6 @@ function setup() {
   textureMode(NORMAL);
   noStroke();
 
-
   // select Shader
   selShader = createSelect();
   selShader.option('Maze');
@@ -49,7 +48,6 @@ function setup() {
 
   pg.quad(-1, -1, 1, -1, 1, 1, -1, 1);
   texture(pg);
-  
 }
 
 function draw() {
